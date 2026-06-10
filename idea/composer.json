@@ -16,6 +16,7 @@
     "require-dev": {
         "driftingly/rector-laravel": "^2.5",
         "fakerphp/faker": "^1.23",
+        "laravel/boost": "^2.4",
         "laravel/pail": "^1.2.5",
         "laravel/pao": "^1.0.6",
         "laravel/pint": "^1.27",
@@ -53,6 +54,10 @@
         "test": [
             "@php artisan config:clear --ansi @no_additional_args",
             "@php artisan test"
+        ],
+        "format": [
+            "vendor/bin/rector",
+            "vendor/bin/pint"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
